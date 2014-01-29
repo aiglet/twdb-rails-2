@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140129211136) do
+ActiveRecord::Schema.define(:version => 20140129214506) do
+
+  create_table "book_triggers", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "trigger_id"
+    t.integer  "added_by_user_ud"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -33,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20140129211136) do
 
   create_table "triggers", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_triggers", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "trigger_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
