@@ -8,6 +8,9 @@ Twdb::Application.routes.draw do
   
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
+  
+  match "/user/triggers" => "user#trigger_update", :as => :trigger_update
+  
 
 
 

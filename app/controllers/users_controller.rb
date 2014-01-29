@@ -80,4 +80,14 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def trigger_update
+  	@user = User.find(params[:id])
+  	
+  	respond_to do |format|
+  		format.html { render action: "trigger_edit" }
+  		end
+  	end
+  
+  
 end

@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+	triggers = Trigger.create (
+		[
+			{ name: 'General Audiences' },
+			{ name: 'Teen and Up' },
+			{ name: 'Mature' },
+			{ name: 'Explicit' },
+			{ name: 'Graphic Violence' },
+			{ name: 'Violence' },
+			{ name: 'Major Character Death' },
+			{ name: 'Character Death' },
+			{ name: 'Sex' },
+			{ name: 'Rape' },
+			{ name: 'Abuse' },
+			{ name: 'Child Abuse' }
+		]
+		)
