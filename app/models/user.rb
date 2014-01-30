@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :bio, :birthday, :name, :provider, :uid
   
   # A user can have many triggers.
-  has_many :user_triggers
+  has_many :user_triggers,
+  	:dependent => :destroy
   
     
   #This is a class method, callable from SessionsController hence the 'User'

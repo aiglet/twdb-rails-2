@@ -1,8 +1,12 @@
 Twdb::Application.routes.draw do
-  resources :books
+  
+  resources :books do
+  	resources :book_triggers
+  end
 
-
-  resources :users
+  resources :users do
+  	resources :user_triggers
+  end
   
 	root :to => 'books#index'
   

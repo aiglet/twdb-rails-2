@@ -28,12 +28,10 @@
 <p>
 	<b>Triggers</b>
 	<ul>
-<!--
-	WHAT GOES HERE:
-	A search of the user_triggers database, returning each of the user's triggers in a list. There probably ought to be some way of forcing it to return them in a logical order. Sort by trigger_id should do it, at least then they'll always return in the same order for everyone. 
-	-->
-
-		</ul>
+	<%= for @user.user_triggers.each |item| %>
+		<li> <% user_trigger.trigger_id %>
+	<% end %>
+	</ul>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

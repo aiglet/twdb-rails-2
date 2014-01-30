@@ -1,0 +1,2 @@
+class UserTriggersController < ApplicationController
+end

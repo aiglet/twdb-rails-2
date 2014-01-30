@@ -25,6 +25,11 @@
   <%= @book.description %>
 </p>
 
+<p>
+	<b>Potential Triggers in this Book:</b>
+	<%= @book.book_triggers %>
+</p>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

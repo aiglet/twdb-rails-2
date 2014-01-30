@@ -1,0 +1,2 @@
+class BookTriggersController < ApplicationController
+end
